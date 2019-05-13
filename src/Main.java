@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Main {
 //    Exercise 1:
 //    Create a program that prints “It’s a great day today”. Then ask the user “What is your name?. Then print “Hello [NAME]”
@@ -126,6 +127,57 @@ public class Main {
 
 // Exercise 9:
 //   Ask the user for their height in centimeters. Print their height in feet and inches.
-        
+//        Scanner reader = new Scanner(System.in);
+//        System.out.println("Enter height in centimeters");
+//        double height = reader.nextInt();
+//        double feet = height * .0328;
+//        double inches = height * .3937;
+//        System.out.println("You are " + feet + "feet" + inches + "inches" );
+
+
+// Exercise 10:
+//   Ask the user to enter three numbers. Find the largest of three numbers using only things we learned today.
+//          Scanner reader = new Scanner(System.in);
+//          System.out.println("Enter three numbers");
+//          int num1 = reader.nextInt();
+//          int num2 = reader.nextInt();
+//          int num3 = reader.nextInt();
+//          if (num1 > num2 && num1 > num3) {
+//              System.out.println("The largest is:" + num1);
+//          }
+//          else if (num2 > num3 && num2 > num1)  {
+//              System.out.println("The largest is:" + num2);
+//          }
+//          else if (num3 > num1 && num3 > num2) {
+//              System.out.println("The largest is:" + num3);
+//          }
+
+//  Exercise 11:
+//    Create a program that can calculate the quadratic equation. Google it if you don't know the equation
+        Scanner input = new Scanner(System.in);
+
+        double a = 0;
+        double b = 0;
+        double c = 0;
+        double discriminant = 0;
+        double d = 0;
+        double x = 1;
+        System.out.println("Enter the value of a : ");
+        a = input.nextDouble();
+        System.out.println("Enter the value of b : ");
+        b = input.nextDouble();
+        System.out.print("Enter the value of c : ");
+        c = input.nextDouble();
+        discriminant = (b * b - 4 * a * c);
+
+        d = Math.sqrt(discriminant);
+
+        if (discriminant >= 0.0) {
+           System.out.println("First root of the equation : " + (-b + d) / (2.0 * a));
+           System.out.println("Second root of the equation : " +(-b - d) / (2.0*a));
+        }
+        else {
+             System.out.println("The roots are not real numbers.");
+        }
     }
 }
